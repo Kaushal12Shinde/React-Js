@@ -7,6 +7,7 @@ import UseRef from './component/UseRef'
 import UseState from './component/UseState'
 import UseContext from './component/useContext'
 import ThemeContext from './context/ThemeContext'
+import UseReducer from './component/UseReducer'
 
 function App() {
   const [theme, setTheme] = useState('Light');
@@ -17,7 +18,8 @@ function App() {
       {/* <UseEffect/> */}
       {/* <Polyfil/> */}
       {/* <UseRef/> */}
-      <UseContext/>
+      {/* <UseContext/> */}
+      <UseReducer/>
     </ThemeContext.Provider>
   )
 }
