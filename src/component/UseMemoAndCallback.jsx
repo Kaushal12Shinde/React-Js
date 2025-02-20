@@ -34,6 +34,8 @@ const UseMemoAndCallback = () => {
                 the fucntion
             </p>
             <p>UseCallback - {squareValueCallback()}</p>
+            <p>when Should you not use useCallback or useMemo</p>
+            <p>Event Handlers or Inline Functions, Excessive memory Consumption, garbage collection concerns</p>
         </div>
     )
 }
