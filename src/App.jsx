@@ -8,6 +8,7 @@ import UseState from './component/UseState'
 import UseContext from './component/useContext'
 import ThemeContext from './context/ThemeContext'
 import UseReducer from './component/UseReducer'
+import UseMemoAndCallback from './component/UseMemoAndCallback'
 
 function App() {
   const [theme, setTheme] = useState('Light');
@@ -19,7 +20,8 @@ function App() {
       {/* <Polyfil/> */}
       {/* <UseRef/> */}
       {/* <UseContext/> */}
-      <UseReducer/>
+      {/* <UseReducer/> */}
+      <UseMemoAndCallback/>
     </ThemeContext.Provider>
   )
 }
