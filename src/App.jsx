@@ -18,12 +18,12 @@ function App() {
     <ThemeContext.Provider value={{theme, setTheme}}>
       {/* <UseState/> */}
       {/* <UseEffect/> */}
-      {/* <Polyfil/> */}
+      <Polyfil/>
       {/* <UseRef/> */}
       {/* <UseContext/> */}
       {/* <UseReducer/> */}
       {/* <UseMemoAndCallback/> */}
-      <UseImparativeHandleHook/>
+      {/* <UseImparativeHandleHook/> */}
     </ThemeContext.Provider>
   )
 }
