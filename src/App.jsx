@@ -9,6 +9,7 @@ import UseContext from './component/useContext'
 import ThemeContext from './context/ThemeContext'
 import UseReducer from './component/UseReducer'
 import UseMemoAndCallback from './component/UseMemoAndCallback'
+import UseImparativeHandleHook from './component/UseImparativeHandleHook'
 
 function App() {
   const [theme, setTheme] = useState('Light');
@@ -21,7 +22,8 @@ function App() {
       {/* <UseRef/> */}
       {/* <UseContext/> */}
       {/* <UseReducer/> */}
-      <UseMemoAndCallback/>
+      {/* <UseMemoAndCallback/> */}
+      <UseImparativeHandleHook/>
     </ThemeContext.Provider>
   )
 }
