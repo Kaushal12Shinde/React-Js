@@ -1,4 +1,5 @@
 import React, { useEffect, useLayoutEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const UseEffect = () => {
 
@@ -7,24 +8,25 @@ const UseEffect = () => {
     const [second, setSeconds] = useState(0);
     useEffect(()=>{
         const interval = setInterval(()=>{
-            setSeconds((prevSecond)=> prevSecond+1);    
+            setSeconds((prev) => prev +1);
         },1000)
 
+        // component unmounts or cleanup method
         return () =>{
             clearInterval(interval);
             console.log('Component Unmount');
         }
     },[]);
 
-    const fetchProducts = async () =>{
-        const response = await fetch('https://fakestoreapi.com/products/1');
+    const fetchProducts = async () => {
+        const response = await fetch(`https://fakestoreapi.com/products/${second}`);
         const data = await response.json();
         setProduct(data);
     }
 
     useEffect(() => {
-        fetchProducts()
-    },[])
+       fetchProducts();
+    },[second])
 
     useEffect(()=>{
         console.log('Component Mounted');
@@ -47,11 +49,11 @@ const UseEffect = () => {
         <ul style={{ listStyle: "disc" }}>
             <li>When it is empty it runs only once</li>
             <li>when the value inside array changes, effects re runs </li>
-            <li>If removed, effect will run on every render</li>
+            <li>If removed the array, effect will run on every render</li>
             <li>
-            Handling dependencies ensures effects runs only when necessary and
-            prevents unnecessary re-excution of effect optimizing the
-            performance and avoiding potential Bugs
+                Dependency Array is use to ensure that effects runs only when necessary and
+                prevents unnecessary re-excution of effect by adding required Dependecy in array.. optimizing the
+                performance and avoiding potential Bugs
             </li>
         </ul>
         <p>Q3 - Example for data fetching using UseEffect</p>
@@ -77,9 +79,16 @@ const UseEffect = () => {
                 Good for performance : Does not Block the browser from painting changes on the screen.
 
             UseLayoutEffect - 
-               Synchronous : Runs Immidiately after the dom is updated but before the browser paints anything on the screen.
-               Potentially blocking : can Potentially cause delays in the rendering process if the operations are heavy.
+                Synchronous : Runs Immidiately after the dom is updated but before the browser paints anything on the screen.
+                Potentially blocking : can Potentially cause delays in the rendering process if the operations are heavy.
+                <Link to='/useLayoutEffect'>
+                    <button>useLayoutEffect</button>
+                </Link>
         </p>
+        <Link to='/'>
+            <button>Back</button>
+        </Link>
+       
     </div>
   );
 };
