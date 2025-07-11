@@ -14,6 +14,9 @@ import { BrowserRouter, Route, Router, Routes } from 'react-router-dom'
 import TopicPanel from './component/TopicPanel'
 import UseLayoutEffect from './component/UseLayoutEffect'
 import DragDrop from './component/DragDrop'
+import NestedComment from './component/NestedComment'
+import Pagination from './component/Pagination'
+import InfiniteScroll from './component/InfiniteScroll'
 
 function App() {
   const [theme, setTheme] = useState('Light');
@@ -32,9 +35,10 @@ function App() {
           <Route path='/useMemoAndCallback' element={<UseMemoAndCallback/>}/>
           <Route path='/useImparative' element={<UseImparativeHandleHook/>}/>
           <Route path='/useLayoutEffect' element={ <UseLayoutEffect/>}/>
-        
+          <Route path='/pagination' element={<Pagination/>}/>
+          <Route path='/infinite' element={<InfiniteScroll/>}/>
         </Routes>
-        <DragDrop/>
+        {/* <NestedComment/> */}
       </BrowserRouter>
     </ThemeContext.Provider>
   )

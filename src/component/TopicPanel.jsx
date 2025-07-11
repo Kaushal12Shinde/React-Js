@@ -16,6 +16,8 @@ const TopicPanel = () => {
       <Link to="/useReducer">UseReducer</Link>
       <Link to="/useMemoAndCallback">UseMemoAndCallback</Link>
       <Link to="/useImparative">UseImparativeHandleHook</Link>
+      <Link to="/pagination">Pahination</Link>
+      <Link to="/infinite">Infinite</Link>
     </div>
     <p>{theme}</p>
     </>
